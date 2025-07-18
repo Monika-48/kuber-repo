@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: casestudy-kubepro
+
+spec:
+
+  replicas: 3
+
+  selector:
+
+    matchLabels:
+
+      app: kubepro
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: kubepro
+
+    spec:
+
+      containers:
+
+        - name: kubecasestudy
+
+          image: monikadurga/webkuber
+
+          ports:
+
+            - containerPort: 80
+ 
